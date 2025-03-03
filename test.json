@@ -1,0 +1,14 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Swagger Sample App",
+    "description": "Please click Terms of service",
+    "termsOfService": "http://example.com/terms",
+    "contact": {
+      "name": "API Support",
+      "url": "http://example.com/support",
+      "email": "support@example.com"
+    },
+    "version": "1.0.1"
+  }
+}
