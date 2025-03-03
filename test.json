@@ -1,14 +1,52 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Swagger Sample App",
-    "description": "Please click Terms of service",
-    "termsOfService": "http://example.com/terms",
-    "contact": {
-      "name": "API Support",
-      "url": "http://example.com/support",
-      "email": "support@example.com"
-    },
-    "version": "1.0.1"
+    "title": "NextGen Connect Client API",
+    "description": "Swagger documentation for the NextGen Connect Client API.",
+    "version": "4.5.0"
+  },
+  "servers": [
+    {
+      "url": "/mirth/api"
+    }
+  ],
+  "paths": {
+    "/connectors/doc/_testWrite": {
+      "post": {
+        "tags": [
+          "Connector Services"
+        ],
+        "summary": "Tests whether a file can be written to the specified directory.",
+        "operationId": "testWrite",
+        "parameters": [
+          {
+            "name": "channelId",
+            "in": "query",
+            "description": "The ID of the channel.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelName",
+            "in": "query",
+            "description": "The name of the channel.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully tested write access."
+          },
+          "400": {
+            "description": "Invalid input or request."
+          }
+        }
+      }
+    }
   }
 }
